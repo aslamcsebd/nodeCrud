@@ -1,0 +1,26 @@
+<table class="table table-bordered text-center mt-4">
+    <thead class="bg-primary text-white">
+        <tr>
+            <th scope="col">#Sl</th>
+            <th scope="col">Name</th>
+            <th scope="col">Club</th>
+            <th scope="col">Action</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% players.forEach((player, pIndex)=> { %>
+            <tr>
+                <td scope="row"><%- pIndex+1 %></td>
+                <td scope="row"><%- player.name %></td>
+                <td scope="row"><%- player.club %></td>
+                <td width="10%" class="btn-group">
+                    <a href="/api/player/update/<%- player.id %>" class="btn btn-outline-primary">Edit</a>
+                    <form class="mx-2" action="/api/player/delete/<%- player.id %>?_method=delete" method="post">
+                        <input type="submit" value="Delete" class="btn btn-danger">          
+                    </form>
+                    <a href="/api/player/delete2/<%- player.id %>" class="btn btn-outline-danger">Delete</a>
+                </td>           
+            </tr>
+        <% }) %>
+    </tbody>
+</table>

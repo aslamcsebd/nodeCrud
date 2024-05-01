@@ -1,5 +1,7 @@
 /* mysql npm
-   npm i mysql */
+   npm i mysql
+   players{id, name, club}
+*/
 
 const mysql = require('mysql');
 const conn = mysql.createConnection({

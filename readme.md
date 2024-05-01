@@ -6,19 +6,29 @@
 -   npm init
 -   touch app.js
 -   npm install express
-    - sudo npm install -g nodemon
+-   sudo npm install -g nodemon
 
-    - npm install nodemon -D
-    - nodemon app.js
+-   npm install nodemon -D
+-   nodemon app.js
 
-    - [nodemon] app crashed - waiting for file changes before starting...
-    - sudo pkill -f node
+-   [nodemon] app crashed - waiting for file changes before starting...
+-   sudo pkill -f node
 
-    - nodemon restart
-    - npx nodemon app.js
+-   nodemon restart
+-   npx nodemon app.js
 
-    - best    : npm run dev
-    - old     : npm start
+-   best    : npm run dev
+-   old     : npm start
+
+-   npm install ejs
+-   npm i express-ejs-layouts
+    - var expressLayouts = require('express-ejs-layouts');
+    - app.set('view engine', 'ejs');
+    - app.use(expressLayouts);
+
+-   npm i method-override
+    - var methodOverride = require('method-override')
+    - app.use(methodOverride('_method'))
 </details>
 
 <details>
